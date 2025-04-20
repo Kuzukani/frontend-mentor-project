@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+    /*
+    font-family: 'Inter', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+    */
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding:0;
+      margin:0;
+      background-color: hsl(233, 47%, 7%);
+      color:white;
+      font-size: 15px;
+    }
+    .attribution { 
+      font-size: 11px; 
+      text-align: center; 
+      position: absolute;
+      top: 0;
+    }
+    .attribution a { 
+      color: hsl(277, 64%, 61%); 
+    }
+    .container{
+      display: flex;
+      justify-content: center;
+    }
+    .leftPanel{
+      width:500px;
+      background-color: hsl(244, 38%, 16%);
+      padding:50px 70px;
+      border-radius: 10px 0 0 10px;
+    }
+    .leftPanel h1{
+      font-family: 'Lexend Deca', sans-serif;
+      font-size: 2rem;
+    }
+    .emphase{
+      color:hsl(277, 64%, 61%);
+    }
+    .leftPanel > p{
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      line-height: 25px;
+      color:hsla(0, 0%, 100%, 0.75);
+      margin-top: 30px;
+    }
+    .stat{
+      display: flex;
+      justify-content: space-between;
+      padding-right: 40px;
+      font-family: 'Inter', sans-serif;
+      margin-top: 40px;
+    }
+    .item h2{
+      margin-bottom: 10px;
+    }
+    .item > p{
+      color:hsla(0, 0%, 100%, 0.6);
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      margin-top:0;
+    }
+    .rightPanel{
+      width:500px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 10px 10px 0;
+    }
+    .rightPanel img{
+      width:100%;
+      height: 100%;
+      display: block;
+    }
+    .filter{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      background-color: hsla(277, 64%, 61%, .5);
+    }
+    @media only screen and (max-width:1050px){
+      *{
+        text-align: center;
+      }
+      .attribution{
+        display: none;
+      }
+      .container{
+        flex-direction: column-reverse;
+        margin: 20px 0;
+      }
+      .stat{
+        flex-direction: column;
+        padding:0;
+        margin-top: 20px;
+      }
+      .leftPanel{
+        border-radius: 0 0 10px 10px;
+      }
+      .rightPanel{
+        border-radius: 10px 10px 0 0;
+      }
+    }
+    @media only screen and (max-width:550px){
+      .container{
+        margin: 20px;
+      }
+      .leftPanel,
+      .rightPanel{
+        width:100%;
+      }
+      .leftPanel{
+        padding:20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="leftPanel">
+      <h1>Get <span class="emphase">insights</span> that help your business grow.</h1>
+      <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
+        <div class="stat">
+          <div class="item">
+            <h2>10k+</h2>
+            <p>companies</p>
+          </div>
+          <div class="item">
+            <h2>314</h2>
+            <p>templates</p>
+          </div>
+          <div class="item">
+            <h2>12M+</h2>
+            <p>queries</p>
+          </div>
+        </div>
+    </div>
+
+    <div class="rightPanel">
+      <img src="images/image-header-desktop.jpg" alt="header">
+      <div class="filter"></div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Kuzukani">kuzukani</a>.
+  </div>
+</body>
+</html>

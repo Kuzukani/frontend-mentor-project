@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+/*
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Fraunces', serif;
+*/
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    display: none;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    width: 100%;
+    position: relative;
+}
+
+/*body::-webkit-scrollbar{ hide scrollbar
+    width: 0; 
+}*/
+
+.header{
+    background-image: url(images/desktop/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height:100vh;
+    padding: 20px;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu > a img{
+    width: 100%;
+    height: 100%;
+}
+.menu ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+    font-family: 'Barlow', sans-serif;
+}
+.menu ul li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.menu ul li:nth-last-of-type(2){
+    padding-right: 0;
+}
+.contact{
+    display: inline-block;
+    padding:16px 25px;
+    color: hsl(212, 27%, 19%) !important;
+    background-color: white;
+    border-radius: 50px;
+    font-family: 'Fraunces', serif !important;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    font-weight: 900;
+    transition: .3s;
+}
+.contact:hover{
+    background-color: hsla(0, 0%, 100%, 0.5);
+    color:  white;
+}
+#burger{
+    vertical-align:middle;
+    display: none;
+    cursor: pointer;
+    padding: 5px 0 5px 5px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+#dropDown{
+    position: absolute;
+    background-color: white;
+    left:20px;
+    right:20px;
+    top:90px;
+    text-align: center;
+    padding:20px;
+    display: none;
+}
+#dropDown::after{
+    content:"";
+    position: absolute;
+    bottom:100%;
+    right:0;
+    border-color: transparent transparent white transparent;
+    border-style: solid;
+    border-width: 20px;
+    transform: rotate(-90deg)translateX(-20px);
+}
+#dropDown ul{
+    list-style-type: none;
+    padding:0;
+    margin:0;
+}
+#dropDown ul li a{
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: hsl(213, 9%, 39%);
+    font-family: 'Barlow', sans-serif;
+}
+.yellow-bg{
+    background-color: hsl(51, 100%, 49%);
+    margin-bottom: 20px;
+}
+.yellow-bg:hover{
+    background-color: black;
+    color:white !important;
+}
+.header > h1{
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 200px;
+    color: white;
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+.header a.animate > img{
+    display: block;
+    margin:auto;
+    padding: 100px;
+    animation-name: upDown;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.row{
+    display: flex;
+    justify-content: center;
+}
+.row h1{
+    font-size: 4rem;
+    font-family: 'Fraunces', serif;
+}
+.row p{
+    font-size: 1.35rem;
+    font-family: 'Barlow', sans-serif;
+    color: hsl(232, 10%, 55%);
+}
+.left,
+.right{
+    width:50%;
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.left-contain{
+    width: 700px;
+    max-width: 90%;
+}
+.left p > a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Fraunces', serif;
+    position: relative;
+    padding: 0 5px;
+    display: inline-block;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    font-weight: 900;
+}
+.left p > a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Negative height */
+    width: 100%;
+    height: 10px; /* Height of border */
+    background-color: hsla(51, 100%, 49%, .3);
+    border-radius: 5rem; /* This can be any number but is normally set very high for the pill-shape */
+    z-index: -1;
+    transition: .3s;
+}
+.left p > a:hover::after{
+    background-color: hsla(51, 100%, 49%, 1);
+}
+.secondd{
+    flex-direction: row-reverse;
+}
+.secondd .left p > a::after{
+    background-color: hsl(7, 99%, 70%, .3);
+}
+.secondd .left p > a:hover::after{
+    background-color: hsl(7, 99%, 70%, 1);
+}
+.right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cherry-pic,
+.orange-pic{
+    width: 50%;
+    padding:0;
+    text-align: center;
+    position: relative;
+}
+.cherry-pic img,
+.orange-pic img{
+    object-fit: cover;
+    width: 100%;
+    height:100%;
+    display: block;
+}
+.cherry-pic .text h2,
+.cherry-pic .text p{
+    color: hsl(167, 40%, 24%);
+}
+.orange-pic .text h2,
+.orange-pic .text p{
+    color: hsl(198, 62%, 26%);
+}
+.text{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.text-contain{
+    width: 400px;
+}
+.text h2{
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+.text p{
+    font-size: 1.2rem;
+}
+.clients-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 800px;
+}
+.clients-container h2{
+    font-family: 'Fraunces', serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: hsl(210, 4%, 67%);
+    margin-bottom: 100px;
+}
+.clients{
+    display: flex;
+    justify-content: center;
+    
+}
+.clients .card{
+    max-width: 450px;
+    padding:0 40px;
+    
+}
+.card img{
+    width: 70px;
+    border-radius: 50px;
+}
+.card p:not(.occupy){
+    margin: 50px 0;
+}
+.card p{
+    font-family: 'Barlow', sans-serif;
+}
+.card h3{
+    font-family: 'Fraunces', serif;
+}
+.card p.occupy{
+    color: hsl(210, 4%, 67%);
+    font-size: 0.9rem;
+}
+.img-show{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.img-show .col25{
+    width:25%;
+}
+.img-show .col50{
+    width: 50%;
+}
+.pc{
+    display: block !important;
+}
+.mobile{
+    display: none !important;
+}
+.footter{
+    background-color: #90D4C6;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footter > a{
+    display: inline-block;
+    margin-bottom: 30px;
+    transform: scale(1.15,1.15);
+}
+.footter .mmenu{
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+.footter .mmenu a{
+    color: hsl(168, 34%, 41%);
+    text-decoration: none;
+    padding: 0 20px;
+    font-family: 'Barlow', sans-serif;
+    transition: .1s;
+}
+.footter .mmenu a:hover{
+    color: white;
+}
+.footter .icon{
+    display: flex;
+    justify-content: center;
+}
+.footter .icon a{
+    padding: 10px;
+}
+.footter .icon a:hover svg path{
+    fill: white;
+}
+@media only screen and (max-width:1000px){
+    .row{
+        flex-direction: column-reverse;
+    }
+    .left,
+    .right{
+    width:100%;
+    }
+    .left-contain{
+        text-align: center;
+    }
+    .cherry-pic,
+    .orange-pic{
+        width: 100%;
+    }
+    .col25{
+        display: none;
+    }
+    .orange-pic img.pc{
+        display: none;
+    }
+    .clients{
+        flex-direction: column;
+        height: auto;
+    }
+    .clients-container{
+        height: auto;
+        margin:10px 0;
+    }
+    .clients-container h2{
+        margin-bottom: 50px;
+    }
+    .card{
+        margin:30px 0;
+    }
+    .card p:not(.occupy){
+        margin:0 10px;
+    }
+    
+}
+@media only screen and (max-width:700px){
+    .header{
+        background-image: url(images/mobile/image-header.jpg);
+    }
+    .left p > a{
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+    .text p{
+        font-size: .9rem;
+    }
+    .text h2{
+        font-size: 1.5rem;
+    }
+    .row h1{
+        font-size: 2rem;
+    }
+    .row p{
+        font-size: 1rem;
+    }
+    .text-contain{
+        font-size: .9rem;
+        padding:0 30px;
+    }
+    .menu > ul li{
+        display: none;
+        padding: 0;
+    }
+    #burger{
+        display: inline-block;
+    }
+}
+@media only screen and (max-width:400px){
+    .header > h1{
+        font-size: 1.75rem;
+    }
+    .clients .card{
+        padding: 0 10px;
+    }
+    .text-contain{
+        width: 300px;
+    }
+    .pc{
+        display: none !important;
+    }
+    .mobile{
+        display: block !important;
+    }
+}
