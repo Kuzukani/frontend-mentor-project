@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+    .attribution { 
+      font-size: 11px; 
+      text-align: center; 
+      display: none;
+    }
+    .attribution a { 
+      color: hsl(228, 45%, 44%); 
+    }
+    *{
+      box-sizing:border-box;
+    }
+    body{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        min-height:100vh;
+        padding:0;
+        margin:0;
+        font-size: 15px;
+        font-family: 'Overpass', sans-serif;
+        background-color: hsl(216, 12%, 8%);
+      }
+      .container{
+        width:400px;
+        padding:30px;
+  
+       background-color:hsl(213, 19%, 18%);
+       border-radius:30px;
+      }
+      .container .logo img{
+        background-color: hsla(217, 12%, 63%, .1);
+        padding:15px;
+        border-radius:100%;
+      }
+      .container h1{
+        color:white;
+      }
+      .container p{
+        color: hsl(217, 12%, 63%);
+      }
+      .container button{
+        margin-top:40px;
+        border:none;
+        display: block;
+        width:100%;
+        border-radius:50px;
+        padding:12px;
+        text-transform: uppercase;
+        background-color:hsl(25, 97%, 53%);
+        color:white;
+        cursor:pointer;
+        margin-top:20px;
+        letter-spacing:2px;
+      }
+      .container button:hover{
+        background-color:white;
+        color:hsl(25, 97%, 53%);
+      }
+      form{
+        display:flex;
+        justify-content:space-between;
+      }
+      label{
+        display:inline-block;
+        position:relative;
+      }
+      label input{
+        display:none;
+      }
+      label span{
+        display:inline-block;
+        width:45px;
+        height:45px;
+        border-radius:50%;
+        background-color:hsla(217, 12%, 63%, .1);
+        color:hsl(217, 12%, 63%);
+        text-align:center;
+        /*i dont know why line height 50px make width 45px center? but it work anyway*/
+        line-height:50px;
+        cursor:pointer;
+      }
+      input:hover + span{
+        background-color: hsl(217, 12%, 63%);
+        color:white;
+      }
+      input:checked + span{
+        background-color:hsl(25, 97%, 53%);
+        color:white;
+      }
+      #after{
+        text-align: center;
+        display: none;
+      }
+      #after img{
+        display: block;
+        margin: auto;
+        width: 40%;
+      }
+      #selected{
+        display: inline-block;
+        padding:10px;
+        background-color: hsla(217, 12%, 63%, .1);
+        color:hsl(25, 97%, 53%);
+        margin:20px 0 0;
+        border-radius: 50px;
+        font-size: 0.9em;
+      }
+      #after h1{
+        margin-top:30px;
+      }
+      @media only screen and (max-width:460px){
+        #before,
+        #after{
+          width:100%;
+          margin:0 30px;
+        }
+      }
+  </style>
+</head>
+<body>
+  <div class="container" id="before">
+    <div class="logo"><img src="images/icon-star.svg" alt="icon star"></div>
+    <h1>How did we do?</h1>
+    <p>Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</p>
+    <form action="#" id="rateStar">
+      <label><input type="radio" name="rate" id="one" value="1"><span>1</span></label>
+      <label><input type="radio" name="rate" id="two" value="2"><span>2</span></label>
+      <label><input type="radio" name="rate" id="three" value="3"><span>3</span></label>
+      <label><input type="radio" name="rate" id="four" value="4"><span>4</span></label>
+      <label><input type="radio" name="rate" id="five" value="5"><span>5</span></label>
+    </form>
+    <button type="submit" onclick="popup()">submit</button>
+  </div>
+
+  <div class="container" id="after">
+    <div><img src="images/illustration-thank-you.svg" alt="thank you image"></div>
+    <p id="selected"></p>
+    <h1>Thank you!</h1>
+    <p>We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
+  </div>
+
+  <script>
+    function popup(){
+      //get checked value
+      var checkedValue = document.querySelector('input[name="rate"]:checked').value;
+
+      //make rate container disappear
+      document.getElementById("before").style.display = "none";
+
+      //bring back thank you container that got display:none by default
+      document.getElementById("after").style.display = "block";
+
+      //put text in p#selected
+      document.getElementById("selected").innerHTML = "You selected " + checkedValue + " out of 5";
+
+      /*
+      and i dont know why. while i dont select any of rate number submit button dont work
+      even it have onclick attribute. but thank to this it's works the way it should to
+      hahaha.
+      */
+    }
+  </script>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Kuzukani">Kuzukani</a>.
+  </div>
+
+</body>
+</html>

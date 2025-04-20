@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+<body>
+  <div class="container">
+    <div class="accordian">
+      <h1>FAQ</h1>
+
+      <button id="button1" onclick="toggle('button1')" class="active-button">How many team members can I invite?</button>
+      <div class="inner">You can invite up to 2 additional users on the Free plan. There is no limit on 
+  team members for the Premium plan.</div>
+      <hr>
+
+      <button id="button2" onclick="toggle('button2')">What is the maximum file upload size?</button>
+      <div class="inner">No more than 2GB. All files in your account must fit your allotted storage space.</div>
+      <hr>
+
+      <button id="button3" onclick="toggle('button3')">How do I reset my password?</button>
+      <div class="inner">Click “Forgot password” from the login page or “Change password” from your profile page.A reset link will be emailed to you.</div>
+      <hr>
+
+      <button id="button4" onclick="toggle('button4')">Can I cancel my subscription?</button>
+      <div class="inner">Yes! Send us a message and we’ll process your request no questions asked.</div>
+      <hr>
+
+      <button id="button5" onclick="toggle('button5')">Do you provide additional support?</button>
+      <div class="inner">Chat and email support is available 24/7. Phone lines are open during normal business hours.</div>
+      <hr>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Kuzukani">Kuzukani</a>.
+  </div>
+</body>
+</html>

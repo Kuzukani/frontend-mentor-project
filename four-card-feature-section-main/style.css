@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root{
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    display:none;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+body{
+    font-size: 15px;
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--VeryLightGray);
+    padding:30px;
+    margin: 0;
+}
+.container{
+    text-align: center;
+}
+h1{
+    color: var(--VeryDarkBlue);
+    margin: .2em 0;
+}
+h3{
+    margin-top: 0;
+}
+.slim{
+    font-weight: 200;
+}
+.descript{
+    color: var(--GrayishBlue);
+}
+.card-section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 600px;
+}
+.card{
+    text-align: left;
+    background-color: white;
+    min-height: 250px;
+    padding:30px;
+    width: 350px;
+    margin: 30px 15px;
+    border-radius: 5px 5px 10px 10px;
+    position: relative;
+    
+    background-position: right 30px bottom 30px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    --GrayishBlue: hsla(229, 6%, 66%, .3);
+    box-shadow: 0 10px 20px var(--GrayishBlue);
+}
+.card::after{
+    content:"";
+    position: absolute;
+    bottom:1.5%;
+    left:50%;
+    transform: translateX(-50%);
+    z-index:-1;
+    width:99.5%;
+    height:100%;
+    border-radius: 10px;
+}
+.supervisor{
+    background-image: url(images/icon-supervisor.svg);
+}
+.supervisor::after{
+    background-color: var(--Cyan);
+}
+
+.team-builder{
+    background-image: url(images/icon-team-builder.svg);
+}
+.team-builder::after{
+    background-color: var(--Red);
+}
+
+.karma{
+    background-image: url(images/icon-karma.svg);
+}
+.karma::after{
+    background-color: var(--Orange);
+}
+
+.calculator{
+    background-image: url(images/icon-calculator.svg);
+}
+.calculator::after{
+    background-color: var(--Blue);
+}
+.hidden{
+    display: none;
+}
+@media only screen and (max-width:1150px){
+    .show{
+        display: none;
+    }
+    .hidden{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .card{
+        width:400px;
+        margin: 30px 5px 0;
+    }
+}
+@media only screen and (max-width:500px){
+    .card{
+        width:100%;
+        margin:30px 0 0;
+    }
+    body{
+        font-size: .8em;
+    }
+    .hide-at-sm{
+        display: none;
+    }
+}
