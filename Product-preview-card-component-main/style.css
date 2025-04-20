@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+/*
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+*{
+    box-sizing: border-box;
+}
+.fraunces{
+    font-family: 'Fraunces', serif;
+}
+.montserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+.montserrat-fat{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.dgb{/*Dark grayish blue*/
+    color:hsl(228, 12%, 48%);
+}
+.vdb{/*Very dark blue*/
+    color: hsl(212, 21%, 14%);
+}
+.text-dc{ /*Dark cyan*/
+    color:hsl(158, 36%, 37%);
+}
+.text-white{
+    color: white;
+}
+.background-dc{ /*Dark cyan*/
+    background-color: hsl(158, 36%, 37%);
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    display: none;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+html{
+    font-size: 14px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: hsl(30, 38%, 92%);
+    padding: 10px;
+}
+.mobile{
+    display: none;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    max-width:700px;
+    border-radius: 10px;
+}
+.left,
+.right{
+    width: 50%;
+}
+.left img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+.right{
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    padding:40px;
+}
+.text-space{
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 500;
+}
+.right > h1{
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+}
+.des{
+    font-size: 1.1rem;
+}
+.price{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.true{
+    font-size: 2.5rem;
+    margin:1.5rem 0;
+}
+.del{
+    text-decoration: line-through;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    column-gap: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: hsl(158, 36%, 28%);
+}
+.button img{
+    width: 20px;
+}
+@media only screen and (max-width:750px){
+    .container{
+        flex-direction: column;
+    }
+    .left,
+    .right{
+        width: 100%;
+    }
+
+    .pc{
+        display: none;
+    }
+    .left img{
+        border-radius: 10px 10px 0 0;
+    }
+    .mobile{
+        display: block;
+    }
+    .right{
+        border-radius: 0 0 10px 10px;
+        padding: 20px 40px;
+    }
+    .button{
+        margin:0 0 20px;
+    }
+    .right > h1{
+        margin:10px 0;
+    }
+    .true{
+        margin:1rem 0;
+    }
+}

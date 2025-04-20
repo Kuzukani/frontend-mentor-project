@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+    --Darkcyan: hsl(185, 75%, 39%);
+    --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --DarkgrayishBlue: hsl(227, 10%, 46%);
+    --DarkGray: hsl(0, 0%, 59%);
+}
+.vddb{
+    color: var(--VeryDarkDesaturatedBlue);
+}
+.db{
+    color: var(--DarkgrayishBlue);
+}
+.dg{
+    color: var(--DarkGray);
+}
+.fat{
+    font-weight: 700;
+}
+.normal{
+    font-weight: 400;
+}
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 18px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--Darkcyan);
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    display: none;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+body{ /*not finished yet*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+    background-color: var(--DarkGray);
+    background: url(images/bg-pattern-top.svg) no-repeat, url(images/bg-pattern-bottom.svg) no-repeat;
+    background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+}
+.container{
+    border-radius: 20px;
+    background-color: white;
+    width: 400px;
+    max-width: 400px;
+    text-align: center;
+}
+.container > img{
+    display: block;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.profile{
+    position: relative;
+}
+.profile > img{
+    display: block;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    left: 50%;
+    top: -25%;
+    transform: translate(-50%,-50%);
+}
+.pd-top{
+    padding-top: 40px;
+    margin-bottom: 0;
+}
+.profile h3 > span{
+    display: inline;
+    margin: 10px;
+}
+.city{
+    margin: 5px;
+    font-size: .9rem;
+}
+.stat{
+    margin-top: 30px;
+    border-top: 1px solid var(--DarkGray);
+    display: flex;
+    justify-content: space-evenly;
+}
+.column{
+    padding: 10px 0;
+}
+.number{
+    margin-bottom: 0;
+}
+.describ{
+    font-size: .6rem;
+    margin-top: 5px;
+    letter-spacing: 2px;
+}

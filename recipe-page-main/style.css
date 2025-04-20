@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "outfit";
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "young-serif";
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+  font-style: normal;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+
+  --Stone_100: hsl(30, 54%, 90%);
+  --Stone_150: hsl(30, 18%, 87%);
+  --Stone_600: hsl(30, 10%, 34%);
+  --Stone_900: hsl(24, 5%, 18%);
+
+  --Brown_800: hsl(14, 45%, 36%);
+
+  --Rose_800: hsl(332, 51%, 32%);
+  --Rose_50: hsl(330, 100%, 98%);
+}
+html {
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+body {
+  background-color: var(--Stone_100);
+  font-family: "outfit";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "young-serif";
+  font-weight: 300;
+  color: var(--Brown_800);
+}
+.container {
+  background-color: var(--White);
+  width: 50%;
+  margin: 100px 0;
+  padding: 30px;
+  border-radius: 20px;
+}
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+.bold {
+  font-weight: bold;
+}
+.pre-time {
+  background-color: var(--Rose_50);
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+.pre-time h3 {
+  margin: 10px;
+  color: var(--Rose_800);
+  font-family: "outfit";
+  font-weight: bold;
+}
+.pre-time ul {
+  padding-inline-start: 25px;
+}
+table {
+  width: 100%;
+}
+h1 {
+  font-family: "young-serif";
+  font-weight: 300;
+  color: var(--Stone_900);
+}
+.container p {
+  font-family: "outfit";
+  font-size: 0.9rem;
+  margin: 10px 0;
+}
+ul li,
+ol li {
+  margin: 5px 0;
+  line-height: 1.5rem;
+  padding-inline-start: 10px;
+}
+ul,
+ol {
+  padding-inline-start: 25px;
+}
+table,
+tr,
+td {
+  border-collapse: collapse;
+  padding: 10px 15px;
+}
+tr:not(:last-child) {
+  border-bottom: 1px solid var(--Stone_150);
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 75%;
+    margin: 50px 0;
+  }
+}
+@media only screen and (max-width: 425px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+}

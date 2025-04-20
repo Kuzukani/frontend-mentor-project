@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap');
+    *{
+      font-family: 'Hanken Grotesk', sans-serif;
+      box-sizing: border-box;
+    }
+    body{
+      padding:0;
+      margin:0;
+      font-size:18px;
+    }
+    .attribution { 
+      font-size: 11px;
+      text-align: center; 
+      position:absolute; 
+      left: 50%; 
+      transform: translateX(-50%);
+    }
+    .attribution a {
+       color: hsl(228, 45%, 44%); 
+    }
+    .container{
+      position:absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+
+      border-radius: 30px;
+      box-shadow: 0px 10px 20px 4px hsl(221, 100%, 96%);
+
+      display: flex;
+      justify-content: center;
+    }
+    .left-column{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      background-image: linear-gradient(to bottom,hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+      border-radius: 30px;
+      padding:40px;
+      /*may delete*/
+      width:300px;
+    }
+    .circle{
+      background-image: linear-gradient(to bottom,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+      text-align: center;
+      border-radius: 50%;
+      width:150px;
+      height:150px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .circle h1,
+    p.underscore{
+      margin:0;
+    }
+    .circle h1{
+      font-size: 4rem;
+      color: white;
+    }
+    .underscore{
+      color: hsla(241, 100%, 89%, 0.5);
+      font-size: 0.9rem;
+    }
+    .left-column h2{
+      color:white;
+      margin-bottom: 0px;
+    }
+    p.describ{
+      color:hsla(241, 100%, 89%, 0.8);
+      font-size: 1rem;
+      text-align: center;
+    }
+    .result{
+      color:hsl(241, 100%, 89%);
+      margin-top:0;
+    }
+    .right-column{
+      padding: 40px 30px;
+      width: 300px;
+      font-size: 1rem;
+    }
+    .bold{
+      font-weight: 700;
+      color:black;
+    }
+    .ghost{
+      color:gray;
+      float: right;
+    }
+    .float-left{
+      float:left;
+    }
+    .ghost,p.float-left{
+      margin:5px 0;
+    }
+    .float-left img{
+      vertical-align: sub;
+      padding-right:5px;
+    }
+
+    .individual{
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 10px 0;
+      padding:10px ;
+    }
+    .individual::after{
+      content: '';
+      clear:both;
+      display:table;
+    }
+    .right-column h3{
+      margin-top:0;
+      font-weight: 700;
+    }
+    .reaction{
+      background-color: hsla(0, 100%, 67%, 0.1);
+      color: hsl(0, 100%, 67%);
+    }
+    .memory{
+      background-color: hsla(39, 100%, 56%, 0.1);
+      color: hsla(39, 100%, 56%);
+    }
+    .verbal{
+      background-color: hsla(166, 100%, 37%, 0.1);
+      color:hsl(166, 100%, 37%);
+    }
+    .visual{
+      background-color: hsla(234, 85%, 45%, 0.1);
+      color:hsl(234, 85%, 45%);
+    }
+    .continue p{
+      margin:30px 0 0;
+      text-align: center;
+      background-color: hsl(224, 30%, 27%);
+      padding:15px;
+      border-radius: 50px;
+      color:white;
+
+      cursor: pointer;
+    }
+    .continue p:hover,
+    .continue p:active{
+      background-image: linear-gradient(to bottom,hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+    }
+    @media only screen and (max-width:767px){
+      .container{
+        flex-direction: column;
+        top:0;
+        left: 0;
+        transform: translate(0%,0%);
+        border-radius: 0;
+        box-shadow: none;
+        width:100%;
+      }
+      .left-column{
+        border-radius: 0 0 30px 30px;
+      }
+      .left-column,
+      .right-column{
+        width:100%;
+      }
+      .attribution{
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-column">
+      <h3 class="result">Your Result</h3>
+      <div class="circle">
+        <h1 class="score">76</h1>
+        <p class="underscore">of 100</p>
+        
+      </div>
+      <h2>Great</h2>
+      <p class="describ">You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+
+    <div class="right-column">
+      <h3>Summary</h3>
+      <div class="individual reaction">
+        <p class="float-left"><img src="assets/images/icon-reaction.svg" alt="reaction-icon">Reaction</p>
+        <div class="float-right">
+          <p class="ghost"><span class="bold">80</span> / 100</p>
+        </div>
+      </div>
+
+      <div class="individual memory">
+        <p class="float-left"><img src="assets/images/icon-memory.svg" alt="reaction-icon">Memory</p>
+        <div class="float-right">
+          <p class="ghost"><span class="bold">92</span> / 100</p>
+        </div>
+      </div>
+
+      <div class="individual verbal">
+        <p class="float-left"><img src="assets/images/icon-verbal.svg" alt="reaction-icon">Verbal</p>
+        <div class="float-right">
+          <p class="ghost"><span class="bold">61</span> / 100</p>
+        </div>
+      </div>
+
+      <div class="individual visual">
+        <p class="float-left"><img src="assets/images/icon-visual.svg" alt="reaction-icon">Visual</p>
+        <div class="float-right">
+          <p class="ghost"><span class="bold">72</span> / 100</p>
+        </div>
+      </div>
+
+      <div class="continue">
+        <p>Continue</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/Kuzukani">Kuzukani</a>.
+  </div>
+</body>
+</html>

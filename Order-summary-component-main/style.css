@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+:root{
+    --PaleBlue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+}
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+body{
+    background: var(--PaleBlue) url(images/pattern-background-desktop.svg) no-repeat center top;
+    background-size: contain;
+    min-height: 100vh;
+    margin: 0;
+    padding: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    display: none;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+.container{
+    max-width: 450px;
+}
+.header img{
+    display: block;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+
+}
+.main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 50px;
+    background-color: white;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+.db{
+    color: var(--DarkBlue);
+}
+.deb{
+    color: var(--DesaturatedBlue);
+}
+.bb{
+    color: var(--BrightBlue);
+}
+.background-bb{
+    background-color: var(--BrightBlue);
+}
+.fat{
+    font-weight: 700;
+}
+.fatter{
+    font-weight: 900;
+}
+.des{
+    margin: 0;
+}
+.plan{
+    margin:30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--VeryPaleBlue);
+    border-radius: 20px;
+}
+.plan-container > img{
+    display: block;
+    width: 50px;
+    margin: 20px;
+}
+.col30{
+    width: 30%;
+}
+.col70{
+    width: 70%;
+}
+.plan-container{
+    display: flex;
+    align-items: center;
+}
+.pnp p{
+    margin:5px 0;
+}
+.change{
+    font-size: .9rem;
+    text-decoration: underline 2px solid;
+    padding:10px;
+}
+.change:hover{
+    text-decoration: none;
+    color: hsla(245, 75%, 52%, .7);
+}
+button{
+    cursor: pointer;
+    font-size: .9rem;
+}
+.payment{
+    color: var(--VeryPaleBlue);
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px hsla(245, 75%, 52%, .6);
+}
+.payment:hover{
+    background-color: hsla(245, 75%, 52%, .7);
+}
+.calcel{
+    margin: 25px auto;
+    border: none;
+    background-color: transparent;
+    display: inline-block;
+    padding: 5px;
+}
+.calcel:hover{
+    color: var(--DarkBlue);
+}
+@media only screen and (max-width:380px){
+    .main{
+        padding:0 20px;
+    }
+    .plan-container > img{
+        width: 40px;
+        margin: 10px;
+    }
+    .pnp p{
+        font-size: .9rem;
+    }
+}
