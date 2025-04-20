@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link class="theme" rel="stylesheet" href="style-light.css" />
+    <title>Frontend Mentor | Browser extensions manager UI</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <img src="assets/images/logo.svg" alt="logo" />
+        </div>
+        <div class="theme-toggle" tabindex="0">
+          <img
+            class="theme-icon"
+            src="assets/images/icon-moon.svg"
+            alt="light theme"
+          />
+        </div>
+      </nav>
+
+      <div class="extension">
+        <div class="title"><h1>Extensions List</h1></div>
+        <div class="button">
+          <button class="active extension-button" data-button="0">All</button>
+          <button data-button="1" class="extension-button">Active</button>
+          <button data-button="2" class="extension-button">Inactive</button>
+        </div>
+      </div>
+
+      <div class="list"></div>
+    </div>
+
+    <!--
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </div>
+    -->
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
